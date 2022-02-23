@@ -2,7 +2,7 @@
 In this repository, we will guide you to build a basic gym framework for your own environment and install it as a package in the local system. 
 We tested it on Ubuntu 20.04 with python 3.8.
 ## Install gym
-You can install it with pip (if your default phthon is phthon2, use pip3)
+You can install it with pip.
 ```
 pip3 install gym # or pip3
 ```
@@ -46,7 +46,7 @@ setup(name='myGymEnvs', # name of your package
   install_requires=['gym']  # And any other dependencies Env needs
   )
 ```
-### myGymEnvs/customEnvs/__init__.py
+### myGymEnvs/customEnvs/ `__init__.py`
 Register your environment in gym library
 ```commandline
 from gym.envs.registration import register
@@ -79,7 +79,7 @@ class myEnv(gym.Env):
     def reset(self):
         return None
 ```
-### myGymEnvs/customEnvs/envs/__init__.py
+### myGymEnvs/customEnvs/envs/`__init__.py`
 To enable your environment to be imported correctly, you need to add the following command into the __init__.py file.
 ```commandline
 from customEnvs.envs.testEnv import myEnv
@@ -107,4 +107,4 @@ import gym
 import customEnvs
 env = gym.make('testenv-v0')
 ```
-If you encounter an error about: "module 'customEnvs.envs' has no attribute 'myEnv'", please check the __init__.py file under the envs folder to see if it is empty. Make sure you import the environment myEnv in the initialization file. 
+If you encounter an error about: "module 'customEnvs.envs' has no attribute 'myEnv'", please check the `__init__.py` file under the envs folder to see if it is empty. Make sure you import the environment myEnv in the initialization file. 
