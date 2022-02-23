@@ -4,7 +4,7 @@ We tested it on Ubuntu 20.04 with python 3.8.
 ## Install gym
 You can install it with pip (if your default phthon is phthon2, use pip3)
 ```
-pip install gym # or pip3
+pip3 install gym # or pip3
 ```
 You can also download the source and build gym from source:
 ```commandline
