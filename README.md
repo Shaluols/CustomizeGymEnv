@@ -22,7 +22,7 @@ python3
 import gym
 env = gym.make('CartPole-v0')
 ```
-## Create the framework
+## Step by step guidance to create the gym environment
 Create folders and empty files following the structure:
 
 ```commandline
@@ -84,10 +84,19 @@ To enable your environment to be imported correctly, you need to add the followi
 ```commandline
 from customEnvs.envs.testEnv import myEnv
 ```
-
-## Install your environment
+Or you can skip the tedious steps and directly git clone this repository:
+```commandline
+git clone https://github.com/Shaluols/CustomizeGymEnv.git
+```
+## Install the created gym environment
 In order to install the created folder structure as a package in your local system, 
-you can navigate to the folder myGymEnvs, run:
+you can:
+1. If you followed the steps to create the files by yourself,
+navigate to the folder myGymEnvs, run:
+```commandline
+pip3 install -e .
+```
+2. If you git cloned this repo, navigate to the folder CustomizeGymEnv, run:
 ```commandline
 pip3 install -e .
 ```
